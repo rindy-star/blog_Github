@@ -3,159 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TAXboard - 세무 가이드</title>
+    <title>세무 블로그 - TAXboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary-blue: #1A73E8;
-            --light-bg: #F8F9FA;
-        }
-        body { font-family: 'Pretendard', sans-serif; background-color: var(--light-bg); }
+        body { font-family: 'Noto Sans KR', sans-serif; background-color: #f9fbff; color: #333; }
+        .navbar { background-color: #fff; border-bottom: 1px solid #eee; }
+        .category-badge { background-color: #eef2ff; color: #4f46e5; font-size: 0.8rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; }
         
-        /* Header */
-        .navbar-brand { font-weight: 800; color: var(--primary-blue); letter-spacing: -1px; }
-        
-        /* Hero Banner */
-        .hero-banner {
-            background: linear-gradient(135deg, #1A73E8 0%, #0D47A1 100%);
-            color: white;
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 30px;
-        }
-
-        /* Filter Tabs (Horizontal Scroll) */
-        .filter-scroll {
-            display: flex;
-            overflow-x: auto;
-            white-space: nowrap;
-            padding-bottom: 10px;
-            -ms-overflow-style: none; scrollbar-width: none;
-        }
-        .filter-scroll::-webkit-scrollbar { display: none; }
-        .filter-btn {
-            border-radius: 20px;
-            padding: 6px 18px;
-            margin-right: 8px;
-            border: 1px solid #ddd;
-            background: white;
-            font-size: 0.9rem;
-        }
-        .filter-btn.active {
-            background: var(--primary-blue);
-            color: white;
-            border-color: var(--primary-blue);
-        }
-
-        /* Card Style */
-        .tax-card {
-            border: none;
-            border-radius: 16px;
-            transition: transform 0.2s;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
-        .tax-card:active { transform: scale(0.98); }
-        .card-tag { font-size: 0.75rem; font-weight: bold; color: var(--primary-blue); }
-        .card-title { font-size: 1.1rem; font-weight: 700; line-height: 1.4; }
-        .card-meta { font-size: 0.8rem; color: #666; }
-
-        /* Floating Action Button */
-        .fab {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: var(--primary-blue);
-            color: white;
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 15px rgba(26, 115, 232, 0.4);
-            z-index: 1000;
-        }
+        /* 카드 디자인 핵심 */
+        .card { border: none; border-radius: 16px; transition: transform 0.3s ease, box-shadow 0.3s ease; overflow: hidden; height: 100%; }
+        .card:hover { transform: translateY(-8px); box-shadow: 0 12px 24px rgba(0,0,0,0.08); }
+        .card-img-top { height: 200px; object-fit: cover; }
+        .card-title { font-size: 1.25rem; font-weight: 700; line-height: 1.4; margin: 15px 0; min-height: 3.5rem; }
+        .card-text { color: #666; font-size: 0.95rem; line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+        .card-top { height:50px }
     </style>
 </head>
 <body>
 
-<nav class="navbar navbar-light bg-white sticky-top border-bottom">
+<nav class="navbar navbar-expand-lg sticky-top py-3">
     <div class="container">
-        <a class="navbar-brand" href="#">TAXboard</a>
-        <div class="d-flex">
-            <i class="bi bi-search me-3 fs-5"></i>
-            <i class="bi bi-person-circle fs-5"></i>
+        <a class="navbar-brand fw-bold text-primary" href="#">TAXboard</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link px-3" href="#">세무상식</a></li>
+                <li class="nav-item"><a class="nav-link px-3 active" href="#">절세꿀팁</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="#">공지사항</a></li>
+            </ul>
         </div>
     </div>
 </nav>
 
-<div class="container py-4">
-    <div class="hero-banner shadow-sm">
-        <p class="mb-1 opacity-75 small">📅 7월 세무 일정 안내</p>
-        <h4 class="fw-bold mb-3">7월은 부가가치세 신고의 달!<br>사장님, 신고 준비 되셨나요?</h4>
-        <button class="btn btn-light btn-sm fw-bold px-4 py-2" style="color: var(--primary-blue); border-radius: 10px;">
-            부가세 신고 가이드 보기 <i class="bi bi-chevron-right"></i>
-        </button>
+<main class="container my-5">
+    <header class="text-center mb-5">
+        <h2 class="fw-bold">세무 이슈</h2>
+        <p class="text-muted">복잡한 세금, 핵심만 골라 알기 쉽게 설명해 드립니다.</p>
+    </header>
+
+    <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+            <div class="card shadow-sm">
+                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800" class="card-img-top" alt="세무 이미지">
+                <div class="card-body p-4">
+                    <span class="category-badge">종합소득세</span>
+                    <h5 class="card-title">2026년 프리랜서 종합소득세 신고 시 주의사항 5가지</h5>
+                    <p class="card-text">매년 돌아오는 종합소득세 신고, 특히 프리랜서분들이 놓치기 쉬운 경비 처리 항목과 절세 전략을 정리했습니다.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-4">
+                        <small class="text-muted">2026.03.20</small>
+                        <a href="#" class="btn btn-link text-decoration-none p-0 fw-bold">자세히 보기 →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="card shadow-sm">
+                <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800" class="card-img-top" alt="절세 이미지">
+                <div class="card-body p-4">
+                    <span class="category-badge">연말정산</span>
+                    <h5 class="card-title">신용카드 vs 체크카드, 소득공제 혜택 극대화하는 법</h5>
+                    <p class="card-text">지출 패턴에 따라 달라지는 소득공제 비율! 어떤 카드를 먼저 써야 유리한지 시나리오별로 분석해 드립니다.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-4">
+                        <small class="text-muted">2026.03.18</small>
+                        <a href="#" class="btn btn-link text-decoration-none p-0 fw-bold">자세히 보기 →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4">
+            <div class="card shadow-sm">
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800" class="card-img-top" alt="부동산 이미지">
+                <div class="card-body p-4">
+                    <span class="category-badge">양도소득세</span>
+                    <h5 class="card-title">1주택자 양도세 비과세 혜택, 이것 모르면 세금 폭탄?</h5>
+                    <p class="card-text">최근 개정된 세법을 반영한 1세대 1주택 비과세 요건과 거주 기간 산정 방식을 상세히 살펴봅니다.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-4">
+                        <small class="text-muted">2026.03.15</small>
+                        <a href="#" class="btn btn-link text-decoration-none p-0 fw-bold">자세히 보기 →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="card shadow-sm">
+                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800" class="card-img-top" alt="세무 이미지">
+                <div class="card-body p-4">
+                    <span class="category-badge">종합소득세</span>
+                    <h5 class="card-title">2026년 프리랜서 종합소득세 신고 시 주의사항 5가지</h5>
+                    <p class="card-text">매년 돌아오는 종합소득세 신고, 특히 프리랜서분들이 놓치기 쉬운 경비 처리 항목과 절세 전략을 정리했습니다.</p>
+                    <div class="d-flex justify-content-between align-items-center mt-4">
+                        <small class="text-muted">2026.03.20</small>
+                        <a href="#" class="btn btn-link text-decoration-none p-0 fw-bold">자세히 보기 →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+</main>
+
+<footer class="bg-dark text-light py-5 mt-5">
+    <div class="container text-center">
+        <p class="mb-0">&copy; 2026 Tax Insight Service. All rights reserved.</p>
     </div>
-
-    <section class="mb-4">
-        <h6 class="fw-bold mb-3">[업종별]</h6>
-        <div class="filter-scroll">
-            <button class="filter-btn active">전체</button>
-            <button class="filter-btn">쇼핑몰</button>
-            <button class="filter-btn">음식점</button>
-            <button class="filter-btn">유튜버</button>
-            <button class="filter-btn">프리랜서</button>
-        </div>
-    </section>
-
-    <section>
-        <div class="d-flex justify-content-between align-items-center mb-3">
-            <h6 class="fw-bold m-0">최신 세무 꿀팁</h6>
-            <small class="text-muted">전체보기</small>
-        </div>
-
-        <div class="card tax-card mb-3">
-            <div class="row g-0">
-                <div class="col-4">
-                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=300" class="img-fluid h-100" style="object-fit: cover;" alt="thumbnail">
-                </div>
-                <div class="col-8">
-                    <div class="card-body p-3">
-                        <span class="card-tag">💡 절세 꿀팁</span>
-                        <h5 class="card-title my-1 text-truncate-2">쇼핑몰 사장님이 놓치기 쉬운 매입세액 공제 항목 5가지</h5>
-                        <div class="card-meta">
-                            <span>#부가세 #절세</span> <span class="ms-2"><i class="bi bi-clock"></i> 3분 읽기</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card tax-card mb-3">
-            <div class="row g-0">
-                <div class="col-4">
-                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=300" class="img-fluid h-100" style="object-fit: cover;" alt="thumbnail">
-                </div>
-                <div class="col-8">
-                    <div class="card-body p-3">
-                        <span class="card-tag">📒 가이드</span>
-                        <h5 class="card-title my-1 text-truncate-2">알바생 첫 고용 시 필수 체크리스트 (4대보험)</h5>
-                        <div class="card-meta">
-                            <span>#인건비 #노무</span> <span class="ms-2"><i class="bi bi-clock"></i> 5분 읽기</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-</div>
-
-<a href="#" class="fab text-decoration-none">
-    <i class="bi bi-chat-dots-fill fs-4"></i>
-</a>
+</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
