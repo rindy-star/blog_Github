@@ -19,6 +19,17 @@
         .card-text { color: #666; font-size: 0.95rem; line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
         .card-top { height:50px }
     </style>
+    <script>
+      // window.onload = function() {
+      window.onload = () => { 
+		let jsonArr = 
+		
+		jsonArr.forEach(function(item){
+			console.log(item.category_nm);
+			
+		});
+      };
+    </script>
 </head>
 <body>
 
@@ -45,66 +56,50 @@
     </header>
 
     <div class="row g-4">
-        <div class="col-md-6 col-lg-4">
-            <div class="card shadow-sm">
-                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800" class="card-img-top" alt="세무 이미지">
-                <div class="card-body p-4">
-                    <span class="category-badge">종합소득세</span>
-                    <h5 class="card-title">2026년 프리랜서 종합소득세 신고 시 주의사항 5가지</h5>
-                    <p class="card-text">매년 돌아오는 종합소득세 신고, 특히 프리랜서분들이 놓치기 쉬운 경비 처리 항목과 절세 전략을 정리했습니다.</p>
-                    <div class="d-flex justify-content-between align-items-center mt-4">
-                        <small class="text-muted">2026.03.20</small>
-                        <a href="#" class="btn btn-link text-decoration-none p-0 fw-bold">자세히 보기 →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-            <div class="card shadow-sm">
-                <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800" class="card-img-top" alt="절세 이미지">
-                <div class="card-body p-4">
-                    <span class="category-badge">연말정산</span>
-                    <h5 class="card-title">신용카드 vs 체크카드, 소득공제 혜택 극대화하는 법</h5>
-                    <p class="card-text">지출 패턴에 따라 달라지는 소득공제 비율! 어떤 카드를 먼저 써야 유리한지 시나리오별로 분석해 드립니다.</p>
-                    <div class="d-flex justify-content-between align-items-center mt-4">
-                        <small class="text-muted">2026.03.18</small>
-                        <a href="#" class="btn btn-link text-decoration-none p-0 fw-bold">자세히 보기 →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
         
-        <div class="col-md-6 col-lg-4">
-            <div class="card shadow-sm">
-                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800" class="card-img-top" alt="부동산 이미지">
-                <div class="card-body p-4">
-                    <span class="category-badge">양도소득세</span>
-                    <h5 class="card-title">1주택자 양도세 비과세 혜택, 이것 모르면 세금 폭탄?</h5>
-                    <p class="card-text">최근 개정된 세법을 반영한 1세대 1주택 비과세 요건과 거주 기간 산정 방식을 상세히 살펴봅니다.</p>
-                    <div class="d-flex justify-content-between align-items-center mt-4">
-                        <small class="text-muted">2026.03.15</small>
-                        <a href="#" class="btn btn-link text-decoration-none p-0 fw-bold">자세히 보기 →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
+    <div class="col-md-6 col-lg-4">
             <div class="card shadow-sm">
                 <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800" class="card-img-top" alt="세무 이미지">
                 <div class="card-body p-4">
-                    <span class="category-badge">종합소득세</span>
-                    <h5 class="card-title">2026년 프리랜서 종합소득세 신고 시 주의사항 5가지</h5>
-                    <p class="card-text">매년 돌아오는 종합소득세 신고, 특히 프리랜서분들이 놓치기 쉬운 경비 처리 항목과 절세 전략을 정리했습니다.</p>
+                    <span class="category-badge"></span>
+                    <h5 class="card-title">사업자등록 첫해 결손이 예상될때도 기장을 해야할까!?</h5>
+                    <p class="card-text">오늘은 새로 사업자등록을 개시하는 대표님들에게 유용한 정보이므로 긴 글이지만, 끝까지 읽어주세요~!   사업자등록을 처음 시작하면 초기에
+매출보다 비용이 더 많이 들어가는 경우가 많습니다. 물건을 먼저 사입해야 하거나, 인건비·임차료·광고비·비품 구입비 등 각종 비용이 선행되기
+때문입니다. 그래서 첫해에는 열심히 사업을 했는데도 실제로는 손실이 발생하는 경우가 많습니다. 그런데 많은 분들이 이런 생각을 하십니다.  
+“첫해에 손해를 봤으니, 다음 해 소득세 신고할 때 당연히 그 손실이 반영되겠지?”   하지만 실제로는 그렇지 않은 경우가 많습니다. 왜냐하면
+사업상 손실을 세법상 결손금으로 인정받으려면, 원칙적으로 장부를 갖추고 기장해야 하기 때문입니다. 세법에서는 사업자가 비치·기록한 장부에 의해
+해당 과세기간의 사업소득금액을 계산할 때, 필요경비가 총수입금액을 초과하면 그 초과금액을 결손금이라고 봅니다. 쉽게 말해, 수입보다 비용이 더
+많아서 손해가 난 금액이 바로 결손금입니다. 이 결...</p>
                     <div class="d-flex justify-content-between align-items-center mt-4">
-                        <small class="text-muted">2026.03.20</small>
+                        <small class="text-muted">2026.03.27</small>
                         <a href="#" class="btn btn-link text-decoration-none p-0 fw-bold">자세히 보기 →</a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>    
+  
+    <div class="col-md-6 col-lg-4">
+            <div class="card shadow-sm">
+                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800" class="card-img-top" alt="세무 이미지">
+                <div class="card-body p-4">
+                    <span class="category-badge"></span>
+                    <h5 class="card-title">배우자 또는 직계존비속간의 주택 매매시 취득세(경우에 따라 증여취득세율 적용될 수 있음)</h5>
+                    <p class="card-text">배우자 또는 직계존비속간의 주택 매매시 취득세 (경우에 따라 증여취득세율 적용될 수 있음) 안녕하세요. <세무회계 문> 문용현 세무사입니다.
+양도, 상속, 증여, 취득 등 재산관련 세금을 전문적으로 하고 있는데요. 최근 특히나, 양도세 중과 배제로 인하여 가족간 증여, 저가매매 등의
+문의가 많습니다. 특수관계자(가족 등) 저가양수, 고가양도에 따른 증여세 및 양도소득세는 과거 포스팅한 내용을 참고하시면 됩니다. 현재와 과거
+작성당시의 내용은 모두 동일한데 가독성 좋게 다시 업데이트할 예정입니다.  
+https://blog.naver.com/cta_moonyh/222070612245?trackingCode=blog_bloghome_searchlist
+    직계존비속이나 배우자간 주택 매매시 취득세도 문제가 될 수도 있는데요. 오늘은 이에 대해서 알아보겠습니다. 참고로 양도소득세와 증여세는
+국세로서 세무서가 담당하고, 취득세는 지방세로서 관할 지자체(시/군/구청)이 담당합니다. 기본적으로 취득세...</p>
+                    <div class="d-flex justify-content-between align-items-center mt-4">
+                        <small class="text-muted">2026.03.27</small>
+                        <a href="#" class="btn btn-link text-decoration-none p-0 fw-bold">자세히 보기 →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+	</div>    
 </main>
 
 <footer class="bg-dark text-light py-5 mt-5">
