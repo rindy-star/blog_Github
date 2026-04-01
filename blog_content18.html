@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세무 블로그 - TAXboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans KR', sans-serif; background-color: #f9fbff; color: #333; }
+        .navbar { background-color: #fff; border-bottom: 1px solid #eee; }
+        .category-badge { background-color: #eef2ff; color: #4f46e5; font-size: 0.8rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; }
+        
+        .card { border: none; border-radius: 16px; transition: transform 0.3s ease, box-shadow 0.3s ease; overflow: hidden; height: 100%; }
+        .card:hover { transform: translateY(-8px); box-shadow: 0 12px 24px rgba(0,0,0,0.08); }
+        .card-img-top { height: 200px; object-fit: cover; }
+        .card-title { font-size: 1.25rem; font-weight: 700; line-height: 1.4; margin: 15px 0; min-height: 3.5rem; }
+        .card-text { color: #666; font-size: 0.95rem; line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+        .card-top { height:50px }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top py-3">
+    <div class="container">
+        <a class="navbar-brand fw-bold text-primary" href="#">TAXboard</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link px-3" href="#">세무상식</a></li>
+                <li class="nav-item"><a class="nav-link px-3 active" href="#">절세꿀팁</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="#">공지사항</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-9 col-md-11">
+            
+            <header class="mb-5 border-bottom pb-4">
+                <h1 class="fw-bold mb-3 lh-base" style="letter-spacing: -0.02em;">
+                    [양도소득세] 주택임대사업자의 공실기간 처리규정 (세제혜택별로 다름)
+                </h1>
+                <div class="d-flex align-items-center text-muted small">
+                    <span class="me-3"><i class="bi bi-calendar-event me-1"></i>2026.03.30</span>
+                </div>
+            </header>
+
+            <article class="post-content fs-5 lh-lg" style="color: #444;">            
+                안녕하세요. <strong>문용현 세무사</strong>입니다. 주택임대사업자의
+                세제혜택은 여러 가지가 있는데요. 주요 세제혜택은 아래와 같습니다: 
+                <ul>
+                    <li>임대주택 비과세 거주요건 적용배제</li>
+                    <li>거주주택 비과세</li>
+                    <li>다주택자의 양도소득세 중과배제</li>
+                    <li>장기보유특별공제 추가적용(6년 이상 임대 시, 1년에 2% 추가)</li>
+                    <li>장기보유특별공제 특례적용(8년 이상 50%, 10년 이상 70%)</li>
+                    <li>양도소득세 100% 감면</li>
+                </ul>
+                <br>
+                만약, 위의 세제혜택을 적용할 경우 임대주택에 공실기간이 있다면 이는 임대기간을 충족한 것으로 볼까요? <br>
+                혜택별로 확인해보겠습니다. 
+                <br><strong>양도소득세 세제혜택 공실기간 처리규정:</strong><br>
+                - 임대주택 비과세 거주요건 적용배제 <br>
+                - 거주주택 비과세 <br>
+                - 다주택자의 양도소득세 중과배제 3개월 내 공실기간은 의무임대기간에 산입 <br>
+                - 장기보유특별공제 추가적용 <br>
+                - 장기보유특별공제 특례적용 <br>
+                - 양도소득세 100% 감면 6개월 내 공실기간은 계속 임대한 것으로 봄 (임대기간에는 산입됩니다)
+            </article>
+
+            <div class="d-flex justify-content-between mt-5 pt-4 border-top">
+                <a href="#" class="btn btn-outline-secondary px-4">이전글</a>
+                <a href="#" class="btn btn-primary px-4">목록보기</a>
+                <a href="#" class="btn btn-outline-secondary px-4">다음글</a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-dark text-light py-5 mt-5">
+    <div class="container text-center">
+        <p class="mb-0">&copy; 2026 Tax Insight Service. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
