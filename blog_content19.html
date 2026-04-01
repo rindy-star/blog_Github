@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세무 블로그 - TAXboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans KR', sans-serif; background-color: #f9fbff; color: #333; }
+        .navbar { background-color: #fff; border-bottom: 1px solid #eee; }
+        .category-badge { background-color: #eef2ff; color: #4f46e5; font-size: 0.8rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; }
+        
+        /* 카드 디자인 핵심 */
+        .card { border: none; border-radius: 16px; transition: transform 0.3s ease, box-shadow 0.3s ease; overflow: hidden; height: 100%; }
+        .card:hover { transform: translateY(-8px); box-shadow: 0 12px 24px rgba(0,0,0,0.08); }
+        .card-img-top { height: 200px; object-fit: cover; }
+        .card-title { font-size: 1.25rem; font-weight: 700; line-height: 1.4; margin: 15px 0; min-height: 3.5rem; }
+        .card-text { color: #666; font-size: 0.95rem; line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+        .card-top { height:50px }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top py-3">
+    <div class="container">
+        <a class="navbar-brand fw-bold text-primary" href="#">TAXboard</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link px-3" href="#">세무상식</a></li>
+                <li class="nav-item"><a class="nav-link px-3 active" href="#">절세꿀팁</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="#">공지사항</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-9 col-md-11">
+            
+            <header class="mb-5 border-bottom pb-4">
+                <h1 class="fw-bold mb-3 lh-base" style="letter-spacing: -0.02em;">
+                    인테리어공사(실내건축공사업), 면허 없이 가능할까?
+                </h1>
+                <div class="d-flex align-items-center text-muted small">
+                    <span class="me-3"><i class="bi bi-calendar-event me-1"></i>2026.03.30</span>
+                </div>
+            </header>
+
+            <article class="post-content fs-5 lh-lg" style="color: #444;">
+                우리가 이사를 하거나 보수가 필요한 경우에 인테리어 공사를 맡기는 경우가 많습니다. 그러다 보니 이사 시즌이 되면 바빠지는 업종이 바로 
+                <strong>실내건축공사업</strong>이 아닐까 싶습니다. 간단한 유지보수 공사부터 도배, 장판, 그리고 인테리어를 전반적으로 바꾸는 공사까지 그 
+                금액대가 천차만별입니다.<br><br>
+                오늘은 실내건축공사업(인테리어공사업) 사업자등록부터 세금감면 내용까지 살펴보겠습니다. 인테리어 공사업을 시작하려는 예비 대표님들, 
+                그리고 이미 인테리어업을 하고 계신 대표님들께서 끝까지 함께 해주시기를 바랍니다.<br><br>
+                <strong>실내건축공사업, 면허등록 없이 사업자등록 가능할까?</strong><br><br>
+                실내건축공사업을 하기 위해서는 실내건축공사업 면허 등록 후 사업자등록이 가능합니다. 그러나 공사예정금액이 
+                <strong>1,500만원 미만</strong>인 경우라면 면허 등록 없이 사업자등록이 가능합니다. 반면, 공사예정금액이 1,500만원 
+                이상인 경우에는 실내건축공사업 면허를 취득한 후 사업자 등록이 가능하다는 점 유의하시기 바랍니다.<br><br>
+                이 면허를 취득하기 위해서는 아래와 같은 등록 기준을 충족해야 합니다. ...
+            </article>
+
+            <div class="d-flex justify-content-between mt-5 pt-4 border-top">
+                <a href="#" class="btn btn-outline-secondary px-4">이전글</a>
+                <a href="#" class="btn btn-primary px-4">목록보기</a>
+                <a href="#" class="btn btn-outline-secondary px-4">다음글</a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-dark text-light py-5 mt-5">
+    <div class="container text-center">
+        <p class="mb-0">&copy; 2026 Tax Insight Service. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
