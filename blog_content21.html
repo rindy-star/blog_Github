@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세무 블로그 - TAXboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans KR', sans-serif; background-color: #f9fbff; color: #333; }
+        .navbar { background-color: #fff; border-bottom: 1px solid #eee; }
+        .category-badge { background-color: #eef2ff; color: #4f46e5; font-size: 0.8rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; }
+        
+        .card { border: none; border-radius: 16px; transition: transform 0.3s ease, box-shadow 0.3s ease; overflow: hidden; height: 100%; }
+        .card:hover { transform: translateY(-8px); box-shadow: 0 12px 24px rgba(0,0,0,0.08); }
+        .card-img-top { height: 200px; object-fit: cover; }
+        .card-title { font-size: 1.25rem; font-weight: 700; line-height: 1.4; margin: 15px 0; min-height: 3.5rem; }
+        .card-text { color: #666; font-size: 0.95rem; line-height: 1.6; }
+        .highlight { color: #e63946; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top py-3">
+    <div class="container">
+        <a class="navbar-brand fw-bold text-primary" href="#">TAXboard</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link px-3" href="#">세무상식</a></li>
+                <li class="nav-item"><a class="nav-link px-3 active" href="#">절세꿀팁</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="#">공지사항</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="container my-5">
+	<div class="row justify-content-center">
+    <div class="col-lg-9 col-md-11">
+        
+        <header class="mb-5 border-bottom pb-4">
+            <h1 class="fw-bold mb-3 lh-base" style="letter-spacing: -0.02em;">
+                법인 사업 시작 전에 꼭 알아야 할 것들
+            </h1>
+            <div class="d-flex align-items-center text-muted small">
+                <span class="me-3"><i class="bi bi-calendar-event me-1"></i>2026.03.30</span>
+            </div>
+        </header>
+
+        <article class="post-content fs-5 lh-lg" style="color: #444;">            
+            <p>매출도 아직 없는데, <span class="highlight">법인부터 만드는게 맞을까요?</span> 처음 사업을 시작하려는 분들 중에는 이런 고민을 정말 많이 합니다.</p>
+            <p>“<span class="highlight">개인사업자로 시작해야 하나요?</span> 법인으로 시작해야 하나요?”</p>
+            <p>“법인은 세금이 무조건 유리하나요?”</p>
+            <p>“법인 만들면 대표 월급은 어떻게 하나요?”</p>
+            <p>“회사 돈을 내가 써도 되나요?”</p>
+            <p>“매출이 없어도 신고를 해야 하나요?”</p>
+            <br>
+            <p>막연하게는 <span class="highlight">“법인이 더 있어 보이고, 더 체계적일것 같다”고 생각하지만</span>, 실제로 법인은 개인사업자보다 돈 관리, 세금신고, 급여, 4대보험, 등기 관리까지 훨씬 더 꼼꼼해야 하는 구조 입니다.</p>
+            <p>그래서 법인은 단순히 “크게 해보려고” 만드는 것이 아니라, <span class="highlight">왜 법인이 필요한지부터 따져보고 시작해야</span> 합니다.</p>
+            <br>
+            <p>많은 분들이 법인을 만들면 세금이 무조건 줄고, 사업적으로도 무조건 유리하다고 생각합니다. 하지만 법인은 단순 절세 수단이 아니라 <span class="highlight">사업구조를 분리하고, 책임과 자금을 체계화 하기 위한 형태</span> 입니다.</p>
+            <p>보통 이런 경우 법인을 많이 고민합니다.</p>
+        </article>
+
+        <div class="d-flex justify-content-between mt-5 pt-4 border-top">
+            <a href="#" class="btn btn-outline-secondary px-4">이전글</a>
+            <a href="#" class="btn btn-primary px-4">목록보기</a>
+            <a href="#" class="btn btn-outline-secondary px-4">다음글</a>
+        </div>
+    </div>
+</div>
+</main>
+
+<footer class="bg-dark text-light py-5 mt-5">
+    <div class="container text-center">
+        <p class="mb-0">&copy; 2026 Tax Insight Service. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
